@@ -111,7 +111,7 @@ class TodoItem extends PureComponent {
         let cls = done ? 'is-completed' : ''
         return (
             <div className={`task-item ${cls}`}>
-                <input className="task-status" type="checkbox" onClick={this.toggleComplete}/>
+                <input className="task-status" type="checkbox" defaultChecked={done} onClick={this.toggleComplete}/>
                 <label className="task-name">{task}</label>
                 <button className="task-delete" onClick={this.onDelete}/>
             </div>

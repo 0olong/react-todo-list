@@ -5,8 +5,6 @@ import TodoCounter from './TodoCounter'
 import TodoApi from '../api/todo'
 import TodoContext from './TodoContext'
 import TodoHeader from './TodoHeader'
-
-// import './todo.css'
 import './normalize.min.css'
 import './todo.css'
 
