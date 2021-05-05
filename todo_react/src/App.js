@@ -1,7 +1,6 @@
 import React, {Component} from 'react'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom'
 
-import Home from './components/Home'
 import Todo from './components/Todo'
 import TodoDetail from './components/TodoDetail'
 
@@ -10,8 +9,10 @@ class App extends Component {
         return (
             <Router>
                 <div className="app">
+                    <Route exact path="/">
+                        <Redirect to="/todo" />
+                    </Route>
                     <Route exact path="/todo" component={Todo} />
-                    <Route exact path="/" component={Home} />
                     <Route path="/todo/:id" component={TodoDetail} />
                 </div>
             </Router>

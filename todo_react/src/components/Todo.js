@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
-import Menu from './Menu'
 import TodoList from './TodoList'
-import TodoCounter from './TodoCounter'
 import TodoApi from '../api/todo'
 import TodoContext from './TodoContext'
 import TodoHeader from './TodoHeader'
@@ -78,7 +76,7 @@ class Todo extends Component {
         let todos = this.state.todos
         let text = this.state.text
         console.log('todos', todos)
-        let path = this.props.match.path
+        // let path = this.props.match.path
         let actions = {
             onContextUpdate: this.onUpdate,
             onContextDelete: this.onDelete,
@@ -88,10 +86,7 @@ class Todo extends Component {
         return (
             <TodoContext.Provider value={actions}>
                 <TodoHeader todos={todos} text={text}/>
-                {/*<TodoAdder todos={todos} text={text}/>*/}
                 <TodoList todos={todos}/>
-                {/*<Menu path={path}/>*/}
-                {/*<TodoCounter todos={todos}/>*/}
             </TodoContext.Provider>
         )
     }

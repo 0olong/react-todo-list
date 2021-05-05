@@ -5,9 +5,9 @@ class TodoList extends Component {
     render() {
         let todos = this.props.todos
         let items = todos.map(t => (
-            <div key={t.id}>
+            <React.Fragment key={t.id}>
                 <TodoItem todo={t}/>
-            </div>
+            </React.Fragment>
         ))
         let emptyList = <div className="task-empty">Your list is empty</div>
         return (
